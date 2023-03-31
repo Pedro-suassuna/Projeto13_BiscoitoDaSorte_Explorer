@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+
+  animation: gradient 7000ms linear infinite;
+  background-size: 200% 200%;
+}
+
+.hide {
+  display: none;
+}
+
+.screen1 {
+  width: fit-content;
+}
+
+.screen2 {
+  width: fit-content;
+}
+
+main {
+  margin-top: -4rem;
+  background-color: white;
+  padding: 4.8rem 6.4rem 6.4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* SCREEN 1 */
+h1 {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  max-width: 25.8rem;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  max-width: 19.2rem;
+
+  margin: 1.4rem auto 2rem;
+}
+
+img {
+  max-width: 20rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* SCREEN 2 */
+.screen2 h1 {
+  max-width: 29.7rem;
+}
+
+.screen2 p {
+  background-color: #e4edf1;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+  padding: 1rem;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  max-width: 29.3rem;
+
+  margin: 1.7rem auto;
+
+  animation: messageMove 1500ms 300ms backwards;
+}
+
+.screen2 img {
+  max-width: 30rem;
+  object-fit: cover;
+  margin-bottom: 1.7rem;
+}
+
+.screen2 button {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: white;
+
+  cursor: pointer;
+
+  background-color: #ff9500;
+  border: none;
+  border-radius: 0.4rem;
+
+  padding: 1.6rem;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes messageMove {
+  0% {
+    transform: translateY(20rem) scale(0);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
