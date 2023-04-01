@@ -68,6 +68,10 @@ img {
   cursor: pointer;
 }
 
+.screen1 img:hover {
+  animation: shakeBiscuit 100ms 200ms linear infinite;
+}
+
 /* SCREEN 2 */
 .screen2 h1 {
   max-width: 29.7rem;
@@ -136,5 +140,20 @@ img {
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+
+@keyframes shakeBiscuit {
+  0% {
+    transform: translateY(0) translateX(-0.1rem);
+  }
+  33% {
+    transform: translateY(0.1rem) translateX(0rem) rotate(-5deg);
+  }
+  66% {
+    transform: translateY(0rem) translateX(0.1rem);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
   }
 }
